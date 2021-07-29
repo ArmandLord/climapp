@@ -35,7 +35,9 @@ export const ContainerMin = styled.div`
     border-right: 2px solid rgba(255, 255, 255, 0.08);
 `
 export const ContainerMin2 = styled.div`
-    height: 100%;
-    width: 60%;
+    height: calc(100% - 100px);
+    width: calc(60% - 100px);
+    min-width: 600px;
+    padding: 50px;
     
 `

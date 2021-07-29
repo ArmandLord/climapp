@@ -1,14 +1,14 @@
 import React from 'react'
 import { VscLoading } from 'react-icons/vsc'
+import { ContainerCard } from './Cards.style'
 
 import Card from '../Card/Card'
 
 export default function Cards({ciudades, onClose}) {
-    // console.log(ciudades);
-    if(ciudades){
+    
         return (
-            <>
-                {ciudades.map(el => <Card
+            <ContainerCard>
+                {ciudades ? ciudades.map(el => <Card
                 key={el.id} 
                 name={el.name} 
                 min={el.min} 
@@ -16,14 +16,9 @@ export default function Cards({ciudades, onClose}) {
                 img={el.img} 
                 onClose={onClose} 
                 id={el.id}
-                />)}
-            </>
+                />) : <VscLoading/>}
+            </ContainerCard>
         )
-    } else {
-        return (
-            <VscLoading/>
-        )
-    }
 }
 
 

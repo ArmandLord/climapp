@@ -26,7 +26,7 @@ export const ContainerPais = styled.div`
         height: 120px;
     }
     img{
-        width: 110px;
+        width: 120px;
     }
 `
 
