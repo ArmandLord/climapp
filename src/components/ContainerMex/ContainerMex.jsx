@@ -1,6 +1,7 @@
 import React from 'react'
 import { ContMex, CardMex } from './ContainerMex.style'
 import Pais from '../Pais/Pais'
+import { Link } from 'react-router-dom'
 
 const ContainerMex = () => {
     const mexico = {
@@ -14,7 +15,7 @@ const ContainerMex = () => {
     
     return (
         <ContMex>
-            <h1>ClimApp</h1>
+            <h1><Link to='/info' style={{textDecoration: "none", color: "#fff"}}>ClimApp</Link></h1>
             <CardMex>
                 <Pais 
                     min={mexico.main.temp_min} 

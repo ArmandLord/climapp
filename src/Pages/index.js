@@ -1,0 +1,1 @@
+export { default as ClimAppInfo } from './ClimAppInfo/ClimAppInfo'

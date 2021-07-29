@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { ClimAppInfo } from './Pages'
 import reportWebVitals from './reportWebVitals';
 import { createGlobalStyle } from 'styled-components';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+
 
 const GlobalStyles = createGlobalStyle`
   body{
@@ -14,8 +17,13 @@ const GlobalStyles = createGlobalStyle`
 
 ReactDOM.render(
   <React.StrictMode>
-    <GlobalStyles/>
-    <App />
+    <Router>
+      <GlobalStyles/>
+      <Switch>
+          <Route component={App} path="/" exact/>
+          <Route component={ClimAppInfo} path="/info" exact/>
+      </Switch>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
