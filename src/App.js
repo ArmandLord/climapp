@@ -8,7 +8,7 @@ function App() {
   
   function onSearch(ciudad){
     const apiKey = "6448b47234025fbd1d4f4777e67eaa18"
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}&units=metric`)
     .then(re => re.json())
     .then(data => {
       
