@@ -4,7 +4,7 @@ import { VscLoading } from 'react-icons/vsc'
 import Card from '../Card/Card'
 
 export default function Cards({ciudades, onClose}) {
-    console.log(ciudades);
+    // console.log(ciudades);
     if(ciudades){
         return (
             <>

@@ -4,6 +4,7 @@ export const Bakground = styled.div`
     margin: 0;
     padding: 0;
     width: 100vw;
+    
     height: 100vh;
     /* background: rgb(85,205,255);
     background: linear-gradient(180deg, rgba(85,205,255,1) 0%, rgba(1,6,78,1) 90%); */
@@ -18,10 +19,11 @@ export const Bakground = styled.div`
 `
 
 export const ContainerMax = styled.div`
-    height: 95%;
+    height: 92%;
     width: 95%;
     display: flex;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    max-width: 1800px;
 `
 
 export const ContainerMin = styled.div`
