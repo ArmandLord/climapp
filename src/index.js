@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { ClimAppInfo } from './Pages'
+import { ClimAppInfo, CardId } from './Pages'
 import reportWebVitals from './reportWebVitals';
 import { createGlobalStyle } from 'styled-components';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
@@ -22,6 +22,7 @@ ReactDOM.render(
       <Switch>
           <Route component={App} path="/" exact/>
           <Route component={ClimAppInfo} path="/info" exact/>
+          <Route render={({match})=> <CardId id={match.params.id}/>} path="/card/:id" exact/>
       </Switch>
     </Router>
   </React.StrictMode>,

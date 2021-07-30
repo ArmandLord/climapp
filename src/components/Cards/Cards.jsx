@@ -4,6 +4,7 @@ import { ContainerCard } from './Cards.style'
 
 import Card from '../Card/Card'
 
+
 export default function Cards({ciudades, onClose}) {
     
         return (
