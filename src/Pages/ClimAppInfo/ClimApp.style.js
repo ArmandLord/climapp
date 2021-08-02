@@ -36,11 +36,8 @@ export const Imagen = styled.div`
     width: 35%;
     height: 70%;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    img{
-        width: 200px;
-    }
+    align-items: flex-start;
+    justify-content: flex-end;
 `
 
 export const ConInf = styled.div`

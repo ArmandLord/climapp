@@ -4,6 +4,7 @@ import { ContainerI, Btn, Info, ConInf, Contacto, Imagen} from './ClimApp.style'
 import { IoHome } from 'react-icons/io5'
 import { GrFacebook, GrLinkedin } from 'react-icons/gr'
 import { GoMarkGithub } from 'react-icons/go'
+import { Form } from '../../components'
 
 const ClimAppInfo = () => {
     return (
@@ -25,7 +26,7 @@ const ClimAppInfo = () => {
                             </Contacto>
                         </ConInf>
                         <Imagen>
-                            {/* <img src="https://www.pngkey.com/png/full/964-9648013_vinilo-pared-bola-del-mundo-bola-del-mundo.png" alt="mundo"/> */}
+                            <Form></Form>
                         </Imagen>
                     </Info>
                 </ContainerI>

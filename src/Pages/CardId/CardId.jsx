@@ -1,5 +1,10 @@
 import React,{useState, useEffect} from 'react'
-import Card from '../../components/Card/Card';
+import { Bakground, ContainerMax } from '../../global.style';
+import { ContainerDetail, Nav, Detalle, H2 } from './CardId.style'
+import { Btn } from '../ClimAppInfo/ClimApp.style'
+import { IoHome } from 'react-icons/io5'
+import { Link } from 'react-router-dom';
+import CardDetail from '../../components/CardDetail/CardDetail';
 
 const CardId = ({id}) => {
     // console.log(id);
@@ -33,17 +38,29 @@ const CardId = ({id}) => {
         })
       }
     return (
-        <div>
-            
-            <Card
-                key={ciudad.id} 
-                name={ciudad.name} 
-                min={ciudad.min} 
-                max={ciudad.max} 
-                img={ciudad.img}  
-                id={ciudad.id}
-                />
-        </div>
+        <Bakground>
+            <ContainerMax>
+              <ContainerDetail>
+                <Nav>
+                  <Btn to='/'><IoHome/></Btn>
+                  <Link to='/info' style={{textDecoration: "none"}}><h3>ClimApp</h3></Link>
+                </Nav>
+                <Detalle>
+                  <H2>Vista de detalle 👀</H2>
+                  <CardDetail
+                    longitud={ciudad.longitud}
+                    latitud={ciudad.latitud} 
+                    weather={ciudad.weather}
+                    name={ciudad.name} 
+                    min={ciudad.min} 
+                    max={ciudad.max} 
+                    img={ciudad.img}  
+                    />
+                </Detalle>
+              </ContainerDetail>
+              
+            </ContainerMax>
+        </Bakground>
     )
 }
 
