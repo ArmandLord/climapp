@@ -11,7 +11,15 @@ function App() {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}&units=metric`)
     .then(re => re.json())
     .then(data => {
-      
+      let yaexiste = ciudades.some(city => 
+        city.id
+         === 
+        data.id
+        )
+                if(yaexiste){
+                  alert ("Ciudad en pantalla")
+                }
+
       if (data.cod === 200) {
         const ciudad = {
           min: data.main.temp_min,
